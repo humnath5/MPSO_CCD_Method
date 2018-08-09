@@ -7,7 +7,7 @@
 
 double Sphere(double * x,int nd);
 double Rastrigin(double * x, int nd);
-double Rosenbrock(double*x, int nd);
+double Rosenbrock(double*x);
 double Griewank(double * x, int nd);
 double Ackley(double * x, int nd);
 double Levy(double * x, int nd);

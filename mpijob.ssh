@@ -1,0 +1,14 @@
+#!/bin/bash
+#$ -V
+#$ -cwd
+#$ -j y
+#$ -S /bin/bash
+#$ -N mpipso
+#$ -o $JOB_NAME.o$JOB_ID
+#$ -e $JOB_NAME.e$JOB_ID
+#$ -q queue type
+#$ -pe fill num_processors
+#$ -P hostname
+module load intel impi
+mpirun--machinefile machinefile.$JOB_ID -np $NSLOTS 
+./mpipso  
